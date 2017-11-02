@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %}Star Wars Home{% endblock title %} {% block contenido %}
+
+
+<ul class="collection">
+    {% for character in characters %}
+    <li class="collection-item"></li>
+    <li class="collection-item avatar">
+        <img src="{{character.1}}" alt="" class="circle">
+        <span class="title">{{character.0}}</span>
+
+        <a href="{{character.2}}" target="_blank" class="secondary-content">
+            <i class="material-icons">http</i>
+        </a>
+    </li>
+    {% endfor%}
+</ul>
+
+
+{% endblock contenido %}
